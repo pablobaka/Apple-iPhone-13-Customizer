@@ -1,22 +1,71 @@
 :root {
     --btn-color-selector-grey: #e9e9ed;
+
     --iphone-color-pink: #fbe2dd;
     --iphone-color-blue: #447792;
     --iphone-color-midnight: #42474d;
     --iphone-color-starlight: #fbf7f4;
     --iphone-color-product-red: #c82333;
+
+    --iphone-color-sierra-blue: #adc6dc;
+    --iphone-color-silver: #f2f3ee;
+    --iphone-color-gold: #faead3;
+    --iphone-color-graphite: #605f5b;
+
+    --case-color-marigold: #ffab74;
+    --case-color-clover: #546a55;
+    --case-color-chalk-pink: #f7ded9;
+    --case-color-abyss-blue: #4c5a63;
+    --case-color-pink-pomelo: #fc8476;
+    --case-color-midnight: #505251;
+    --case-color-blue-jay: #55788c;
+    --case-color-product-red: #d14254;
+}
+
+h4:not(:first-of-type) {
+    margin-top:calc(1rem + .3vw);
+}
+
+.hidden {
+    display: none;
+}
+
+.navigational-button {
+    border-radius: 5px;
+    padding: 8px 14px;
+    border: 0px;
+    background-color: #0071e3;
+    color: white;
+    cursor: pointer;
 }
 
 .div-iphone-img-container {
+    width: 300px;
+    aspect-ratio: 940 / 1112;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .div-iphone-img {
     width:300px;
     aspect-ratio: 940 / 1112;
-    background-color: aqua;
     background-image: url('/img/img-iphone/iphone-13-mini-pink-select-2021.png');
     background-size: contain;
+    position: absolute;
+}
+
+.div-case-img {
+    width:300px;
+    aspect-ratio: 940 / 1112;
+    background-size: contain;
+    position: absolute;
+}
+
+.div-accessory-img {
+    width:300px;
+    aspect-ratio: 940 / 1112;
+    background-size: contain;
+    position: absolute;
 }
 
 .btn-color-selector {
