@@ -21,7 +21,7 @@
     --case-color-blue-jay: #55788c;
     --case-color-product-red: #d14254;
 
-    --window-width: 500px;
+    --window-width: 300px;
 }
 
 h4:not(:first-of-type) {
@@ -48,6 +48,7 @@ h4:not(:first-of-type) {
     justify-content: center;
     position: relative;
 }
+
 .div-iphone-img {
     width: var(--window-width);
     aspect-ratio: 940 / 1112;
@@ -86,3 +87,9 @@ h4:not(:first-of-type) {
     width:15px;
     aspect-ratio: 1/1;
 }
+
+@media (min-width: 992px) { 
+    :root {
+        --window-width: 500px;
+    }
+ }
