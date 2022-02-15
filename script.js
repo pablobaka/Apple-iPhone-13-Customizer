@@ -3,10 +3,11 @@ $(document).ready(function(){
    //initializes css variables//
    /////////////////////////////
    var currentPhoneModel = "13-mini";
+   var currentColor = "pink";
    var currentElement = "";
 
    function initializeCSS() {
-      $(".div-iphone-img").css("background-image", "url('/img/img-iphone/iphone-13-mini-pink-select-2021.png')");
+      $(".div-iphone-img").css("background-image", "url('/img/img-iphone/13-mini/iphone-13-mini-pink.png')");
       $(".div-case-img").css("background-image", "none");
       $(".div-accessory-img").css("background-image", "none");
 
@@ -46,6 +47,7 @@ $(document).ready(function(){
 
             currentPhoneModel = "13-mini";
             currentElement = "";
+            currentColor = "pink"
 
             initializeCSS();
 
@@ -152,32 +154,42 @@ $(document).ready(function(){
 
       //checks what type of button is currently being clicked - phone, case, or accessory
       if (currentElement.hasClass('btn-color-selector-phone')) {
-            //checks id of button clicked and sets currentPhoneModel variable accordingly
+            //checks id of button clicked and sets currentPhoneModel and currentColor variables accordingly
             if ($(this).attr('id').indexOf('13-mini-') > -1) {
                   currentPhoneModel = "13-mini"
+                  currentColor = currentElement.attr('id').replace("13-mini-","");
             }
             else if ($(this).attr('id').indexOf('13-pro-max-') > -1) {
                   currentPhoneModel = "13-pro-max"
+                  currentColor = currentElement.attr('id').replace("13-pro-max-","");
             }
             else if ($(this).attr('id').indexOf('13-pro-') > -1) {
                   currentPhoneModel = "13-pro"
+                  currentColor = currentElement.attr('id').replace("13-pro-","");
             }
             else {
                   currentPhoneModel = "13"
+                  currentColor = currentElement.attr('id').replace("13-","");
             }
 
             //sets phone background image according to currentElement id
-            $(".div-iphone-img").css("background-image", "url('/img/img-iphone/iphone-" + currentElement.attr('id') + "-select-2021.png')");
+            $(".div-iphone-img").css("background-image", "url('/img/img-iphone/"+ currentPhoneModel + "/iphone-" + currentElement.attr('id') + ".png')");
       }
 
       else if (currentElement.hasClass('btn-color-selector-case')) {
-            //checks if the no-case button is clicked
+            //checks if the no case button is clicked
             if ($(this).attr('id').indexOf('no-case') > -1) {
                $(".div-case-img").css("background-image", "none");
             }
+
+            //checks if the clear case button is clicked
+            else if ($(this).attr('id').indexOf('clear') > -1) { 
+               //sets case background image according to currentElement, currentColor, and currentPhoneModel ids
+               $(".div-case-img").css("background-image", "url('/img/img-case/" + currentPhoneModel + "/" + currentPhoneModel + "-" + currentElement.attr('id') + "-" + currentColor + ".png')");          
+            }
             else {
                //sets case background image according to currentElement id and currentPhoneModel id
-               $(".div-case-img").css("background-image", "url('/img/img-case/" + currentPhoneModel + "-" + currentElement.attr('id') + ".png')");
+               $(".div-case-img").css("background-image", "url('/img/img-case/" + currentPhoneModel + "/" + currentPhoneModel + "-" + currentElement.attr('id') + ".png')");
             }
       }
       else {
@@ -186,11 +198,12 @@ $(document).ready(function(){
                $(".div-accessory-img").css("background-image", "none");
             }
             else {
-               //sets accessory background image according to currentElement id and currentPhoneModel id
+               //sets accessory background image according to currentElement and currentPhoneModel ids
                $(".div-accessory-img").css("background-image", "url('/img/img-accessory/" + currentPhoneModel + "-" + currentElement.attr('id') + ".png')");
             }
       }
-      console.log(currentElement.attr('id'));
-      console.log(currentPhoneModel);
+      console.log("the currentElement's id is: " + currentElement.attr('id'));
+      console.log("the currentPhoneModel is: " + currentPhoneModel);
+      console.log("the currentColor is: " + currentColor);
     });
   });

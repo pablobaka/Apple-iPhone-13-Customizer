@@ -52,7 +52,7 @@ h4:not(:first-of-type) {
 .div-iphone-img {
     width: var(--window-width);
     aspect-ratio: 940 / 1112;
-    background-image: url('/img/img-iphone/iphone-13-mini-pink-select-2021.png');
+    background-image: url('/img/img-iphone/13-mini/iphone-13-mini-pink.png');
     background-size: contain;
     position: absolute;
 }
