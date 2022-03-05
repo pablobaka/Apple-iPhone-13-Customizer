@@ -7,6 +7,34 @@ $(document).ready(function(){
    var currentElement = "";
    var currentButton = "";
 
+   function initializeCSS () { 
+      currentPhoneModel = "13-mini";
+      currentColor = "pink";
+      currentElement = "";
+      currentButton = "";
+      $(".div-iphone-img").css("background-image", "url('/img/img-iphone/13-mini/iphone-13-mini-pink.png')");
+      $(".div-case-img").css("background-image", "none");
+      $(".div-accessory-img").css("background-image", "none");
+
+      $("#13-mini-pink").css({"background-color": "var(--btn-color-selector-grey)", "border": "solid 2px var(--btn-color-selector-grey)"});
+      $("#13-mini-pink").siblings(".btn-color-selector").css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"})
+      $("#13-mini-pink").data("isActive",true);
+      $("#13-mini-pink").siblings(".btn-color-selector").data("isActive",false);
+
+      $("#no-case").css({"background-color": "var(--btn-color-selector-grey)", "border": "solid 2px var(--btn-color-selector-grey)"});
+      $("#no-case").siblings(".btn-color-selector").css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"})
+      $("#no-case").data("isActive",true);
+      $("#no-case").siblings(".btn-color-selector").data("isActive",false);
+
+      $("#no-accessory").css({"background-color": "var(--btn-color-selector-grey)", "border": "solid 2px var(--btn-color-selector-grey)"});
+      $("#no-accessory").siblings(".btn-color-selector").css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"})
+      $("#no-accessory").data("isActive",true);
+      $("#no-accessory").siblings(".btn-color-selector").data("isActive",false);
+   };
+
+   initializeCSS();
+
+
    ///////////////
    //nav buttons//
    ///////////////
@@ -21,36 +49,14 @@ $(document).ready(function(){
             break;
 
          // case('toPrevious'): 
-         //    $(currentButton).parent().fadeOut( function() {
-         //       $(currentButton).parent().prev(".div-btn-container").fadeIn();
+         //    $(currentButton).parent().fadeOut( 'fast', function() {
+         //       $(currentButton).parent().prev(".div-btn-container").fadeIn('fast');
          //    });
          //    break;
 
          case('toStart'): 
             $(currentButton).parent().fadeOut( 'fast', function() {
-               currentPhoneModel = "13-mini";
-               currentColor = "pink";
-               currentElement = "";
-               currentButton = "";
-               $(".div-iphone-img").css("background-image", "url('/img/img-iphone/13-mini/iphone-13-mini-pink.png')");
-               $(".div-case-img").css("background-image", "none");
-               $(".div-accessory-img").css("background-image", "none");
-         
-               $("#13-mini-pink").css({"background-color": "var(--btn-color-selector-grey)", "border": "solid 2px var(--btn-color-selector-grey)"});
-               $("#13-mini-pink").siblings(".btn-color-selector").css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"})
-               $("#13-mini-pink").data("isActive",true);
-               $("#13-mini-pink").siblings(".btn-color-selector").data("isActive",false);
-         
-               $("#no-case").css({"background-color": "var(--btn-color-selector-grey)", "border": "solid 2px var(--btn-color-selector-grey)"});
-               $("#no-case").siblings(".btn-color-selector").css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"})
-               $("#no-case").data("isActive",true);
-               $("#no-case").siblings(".btn-color-selector").data("isActive",false);
-         
-               $("#no-accessory").css({"background-color": "var(--btn-color-selector-grey)", "border": "solid 2px var(--btn-color-selector-grey)"});
-               $("#no-accessory").siblings(".btn-color-selector").css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"})
-               $("#no-accessory").data("isActive",true);
-               $("#no-accessory").siblings(".btn-color-selector").data("isActive",false);
-         
+               initializeCSS();
                $(".div-iphone-btn-container").fadeIn('fast');
             });
             break;      
