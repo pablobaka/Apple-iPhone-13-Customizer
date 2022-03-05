@@ -33,25 +33,27 @@ $(document).ready(function(){
     $(".navigational-button").click(function(){
       switch($(this).attr('id')) {
          case('toCase'):
-            $(".div-iphone-btn-container").hide();
-            $(".div-case-btn-container").show();  
+            $(".div-iphone-btn-container").fadeOut( function() {
+               $(".div-case-btn-container").fadeIn();  
+            });
             break;
 
          case('toAccessory'):
-            $(".div-case-btn-container").hide();
-            $(".div-accessory-btn-container").show();  
+            $(".div-case-btn-container").fadeOut( function() {
+               $(".div-accessory-btn-container").fadeIn();               
+            });
             break;
-
+            
          case('toStart'):
-            $(".div-accessory-btn-container").hide();
+            $(".div-accessory-btn-container").fadeOut( function() {
+               currentPhoneModel = "13-mini";
+               currentElement = "";
+               currentColor = "pink"
 
-            currentPhoneModel = "13-mini";
-            currentElement = "";
-            currentColor = "pink"
+               initializeCSS();
 
-            initializeCSS();
-
-            $(".div-iphone-btn-container").show();
+               $(".div-iphone-btn-container").fadeIn();
+            });
             break;
       }
     });
@@ -202,8 +204,8 @@ $(document).ready(function(){
                $(".div-accessory-img").css("background-image", "url('/img/img-accessory/" + currentPhoneModel + "-" + currentElement.attr('id') + ".png')");
             }
       }
-      console.log("the currentElement's id is: " + currentElement.attr('id'));
-      console.log("the currentPhoneModel is: " + currentPhoneModel);
-      console.log("the currentColor is: " + currentColor);
+      console.log("currentElement's id is: " + currentElement.attr('id'));
+      console.log("currentPhoneModel is: " + currentPhoneModel);
+      console.log("currentColor is: " + currentColor);
     });
   });
