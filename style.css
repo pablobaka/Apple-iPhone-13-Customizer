@@ -21,7 +21,20 @@
     --case-color-blue-jay: #55788c;
     --case-color-product-red: #d14254;
 
+    --case-color-golden-brown: #db9969;
+    --case-color-dark-cherry: #6e5764;
+    --case-color-sequoia-green: #566357;
+    --case-color-wysteria: #9795ad;
+
     --window-width: 300px;
+}
+
+body {
+    margin-top:2em;
+}
+
+h3 {
+    margin-bottom: 1em;
 }
 
 h4:not(:first-of-type) {

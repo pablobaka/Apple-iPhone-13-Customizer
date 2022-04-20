@@ -122,7 +122,7 @@ $(document).ready(function(){
                   case ('pink-pomelo'):
                      $(this).css({"background-color": "var(--case-color-pink-pomelo)", "border": "solid 2px var(--case-color-pink-pomelo)"})
                   break;
-                  case ('midnight'):
+                  case ('midnight-silicone'):
                      $(this).css({"background-color": "var(--case-color-midnight)", "border": "solid 2px var(--case-color-midnight)"})
                   break;
                   case ('blue-jay'):
@@ -130,6 +130,24 @@ $(document).ready(function(){
                   break;
                   case ('product-red'):
                      $(this).css({"background-color": "var(--case-color-product-red)", "border": "solid 2px var(--case-color-product-red)"})
+                  break;
+                  case ('golden-brown'):
+                     $(this).css({"background-color": "var(--case-color-golden-brown)", "border": "solid 2px var(--case-color-golden-brown)"})
+                  break;
+                  case ('dark-cherry'):
+                     $(this).css({"background-color": "var(--case-color-dark-cherry)", "border": "solid 2px var(--case-color-dark-cherry)"})
+                  break;
+                  case ('sequoia-green'):
+                     $(this).css({"background-color": "var(--case-color-sequoia-green)", "border": "solid 2px var(--case-color-sequoia-green)"})
+                  break;
+                  case ('midnight-leather'):
+                     $(this).css({"background-color": "var(--case-color-midnight)", "border": "solid 2px var(--case-color-midnight)"})
+                  break;
+                  case ('wisteria'):
+                     $(this).css({"background-color": "var(--case-color-wysteria)", "border": "solid 2px var(--case-color-wisteria)"})
+                  break;
+                  case ('midnight'):
+                     $(this).css({"background-color": "var(--case-color-midnight)", "border": "solid 2px var(--case-color-midnight)"})
                   break;
                }    
          }
