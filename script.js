@@ -149,7 +149,10 @@ $(document).ready(function(){
                   case ('midnight'):
                      $(this).css({"background-color": "var(--case-color-midnight)", "border": "solid 2px var(--case-color-midnight)"})
                   break;
-               }    
+               };
+               if ($(this).hasClass("has-text-light")) {
+                  $(this).css({"color": "#ffffff"});
+               };    
          }
       },
       function() {
@@ -157,7 +160,8 @@ $(document).ready(function(){
          //^ done to prevent active button from losing its active styling on mouse out
          if ($(this).data("isActive") == false) {
                $(this).css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"})
-         }
+         };
+         $(this).css({"color": "#000000"});
       }
    );
 
@@ -173,8 +177,9 @@ $(document).ready(function(){
       $(this).siblings(".btn-color-selector").data("isActive",false);
 
       //sets clicked button and siblings' styling
-      $(this).css({"background-color": "var(--btn-color-selector-grey)", "border": "solid 2px var(--btn-color-selector-grey)"})
-      $(this).siblings(".btn-color-selector").css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"})
+      $(this).css({"color": "#000000"});
+      $(this).css({"background-color": "var(--btn-color-selector-grey)", "border": "solid 2px var(--btn-color-selector-grey)"});
+      $(this).siblings(".btn-color-selector").css({"background-color": "white", "border": "solid 2px var(--btn-color-selector-grey)"});
 
       //checks what type of button is currently being clicked - phone, case, or accessory
       if (currentElement.hasClass('btn-color-selector-phone')) {
