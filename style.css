@@ -91,7 +91,7 @@ h4:not(:first-of-type) {
     padding: 8px 14px;
     border: 2px solid var(--btn-color-selector-grey);
     background-color: white;
-    color: #000000!important;
+    color: #000000;
     cursor: pointer;
     transition: background-color 0.1s, border 0.1s;
 }
