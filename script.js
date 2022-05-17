@@ -91,6 +91,10 @@ $(document).ready(function(){
                   case ('13-product-red'):
                      $(this).css({"background-color": "var(--iphone-color-product-red)", "border": "solid 2px var(--iphone-color-product-red)"})
                   break;
+                  case ('13-mini-green'):
+                  case ('13-green'):
+                     $(this).css({"background-color": "var(--iphone-color-green)", "border": "solid 2px var(--iphone-color-green)"})
+                  break;   
                   case ('13-pro-sierra-blue'):
                   case ('13-pro-max-sierra-blue'):
                      $(this).css({"background-color": "var(--iphone-color-sierra-blue)", "border": "solid 2px var(--iphone-color-sierra-blue)"})
@@ -107,6 +111,10 @@ $(document).ready(function(){
                   case ('13-pro-max-graphite'):
                      $(this).css({"background-color": "var(--iphone-color-graphite)", "border": "solid 2px var(--iphone-color-graphite)"})
                   break;
+                  case ('13-pro-alpine-green'):
+                  case ('13-pro-max-alpine-green'):
+                     $(this).css({"background-color": "var(--iphone-color-alpine-green)", "border": "solid 2px var(--iphone-color-alpine-green)"})
+                  break;   
                   case ('marigold'):
                      $(this).css({"background-color": "var(--case-color-marigold)", "border": "solid 2px var(--case-color-marigold)"})
                   break;
