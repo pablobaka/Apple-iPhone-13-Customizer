@@ -139,6 +139,18 @@ $(document).ready(function(){
                   case ('product-red'):
                      $(this).css({"background-color": "var(--case-color-product-red)", "border": "solid 2px var(--case-color-product-red)"})
                   break;
+                  case ('lemon-zest'):
+                     $(this).css({"background-color": "var(--case-color-lemon-zest)", "border": "solid 2px var(--case-color-lemon-zest)"})
+                  break;
+                  case ('blue-fog'):
+                     $(this).css({"background-color": "var(--case-color-blue-fog)", "border": "solid 2px var(--case-color-blue-fog)"})
+                  break;
+                  case ('eucalyptus'):
+                     $(this).css({"background-color": "var(--case-color-eucalyptus)", "border": "solid 2px var(--case-color-eucalyptus)"})
+                  break;
+                  case ('nectarine'):
+                     $(this).css({"background-color": "var(--case-color-nectarine)", "border": "solid 2px var(--case-color-nectarine)"})
+                  break;
                   case ('golden-brown'):
                      $(this).css({"background-color": "var(--case-color-golden-brown)", "border": "solid 2px var(--case-color-golden-brown)"})
                   break;
